@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css'
 import Wrapper from './Component/Wrapper'
 import Table from './Component/Table'
+import API from './utils/API.js'
 
 
 function App() {
@@ -17,5 +18,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
