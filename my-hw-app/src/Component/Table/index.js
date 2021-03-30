@@ -1,18 +1,17 @@
 import React, { Component } from 'react'
 import API from '../../utils/API.js';
+import EmployeeLine from '../Employee'
 
 class Table extends Component {
     state = {
-       
+       employees: [],
     }
 
 
     //response.data is 20 objects
     componentDidMount() {
         API.getRandomPerson()
-        .then(res => this.setState({ "employees": response.data.results, "shownEmployees":
-        respones.data.results}))
-        console.log(this.state.employees)
+        .then(response => this.setState({ "employees": response.data.results }))
         .catch(err => console.log(err));
     }
 
